@@ -1,0 +1,43 @@
+<script>
+  import { scale } from "svelte/transition";
+
+  export let show = false;
+  export let body = "";
+</script>
+
+{#if show}
+  <div class="note" in:scale={{ duration: 250 }}>
+    <span class="timeago">Hace unos instantes</span>
+    <div class="note__content">
+      {@html body}
+    </div>
+  </div>
+{/if}
+
+<style lang="scss">
+  .note {
+    @apply box-border;
+    @apply rounded-md;
+    @apply bg-white;
+    @apply px-2;
+    @apply py-2;
+    @apply w-full;
+
+    @apply border;
+    @apply border-solid;
+    @apply border-bluegray-200;
+
+    &__content {
+      @apply text-sm;
+      :global(p) {
+        @apply m-0;
+      }
+    }
+  }
+  .timeago {
+    @apply text-xs;
+    @apply mb-1;
+    @apply inline-block;
+    @apply text-bluegray-400;
+  }
+</style>
