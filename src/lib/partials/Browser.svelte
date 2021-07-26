@@ -5,7 +5,7 @@
 	import Video from './Video.svelte';
 </script>
 
-<div class="window" in:fly={{ y: 50, duration: 700 }}>
+<div class="window" in:fly={{ y: 50, duration: 700, delay: 400 }}>
 	<div class="topbar">
 		<span class="dot red" />
 		<span class="dot yellow" />

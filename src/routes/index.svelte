@@ -1,7 +1,9 @@
 <script>
 	import Logo from '$lib/assets/logo.svelte';
+	import Hero from '$lib/partials/Hero.svelte';
 	import Browser from '$lib/partials/Browser.svelte';
 	import Features from '$lib/partials/Features.svelte';
+
 	import { onMount } from 'svelte';
 
 	let showBrowser = false;
@@ -14,6 +16,9 @@
 <div class="app">
 	<div class="header">
 		<Logo />
+		{#if showBrowser}
+			<Hero />
+		{/if}
 		<div class="window">
 			{#if showBrowser}
 				<Browser />
@@ -29,10 +34,6 @@
 		@apply box-border;
 		@apply w-full;
 		@apply h-screen;
-
-		:global(svg) {
-			@apply h-12;
-		}
 		.header {
 			@apply relative;
 			@apply px-12;

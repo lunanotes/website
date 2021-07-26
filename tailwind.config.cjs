@@ -12,7 +12,8 @@ module.exports = {
 			colors: {
 				amber: colors.amber,
 				bluegray: colors.blueGray,
-				truegray: colors.trueGray
+				truegray: colors.trueGray,
+				sky: colors.sky
 			}
 		}
 	},
