@@ -1,5 +1,6 @@
 <script>
 	import { fly } from 'svelte/transition';
+	import { t } from 'svelte-intl-precompile';
 	import Download from '../assets/download.svelte';
 </script>
 
@@ -12,7 +13,7 @@
 		class="download"
 	>
 		<Download />
-		¡Descarga ahora!
+		{$t('hero.downloadNow')}
 	</a>
 	<span in:fly={{ y: 50, duration: 250, delay: 300 }}>Es completamente gratis</span>
 </header>

@@ -9,6 +9,7 @@
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
+		"@beyonk/svelte-google-analytics": "^2.2.0",
 		"@sveltejs/adapter-netlify": "^1.0.0-next.18",
 		"@sveltejs/kit": "next",
 		"@tailwindcss/forms": "^0.3.3",
@@ -16,6 +17,7 @@
 		"eslint": "^7.22.0",
 		"eslint-config-prettier": "^8.1.0",
 		"eslint-plugin-svelte3": "^3.2.0",
+		"postcss": "^8.3.6",
 		"prettier": "~2.2.1",
 		"prettier-plugin-svelte": "^2.2.0",
 		"sass": "^1.36.0",
@@ -23,5 +25,8 @@
 		"svelte-preprocess": "^4.7.4",
 		"tailwindcss": "^2.2.7"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"svelte-intl-precompile": "^0.3.3"
+	}
 }
