@@ -26,4 +26,7 @@
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;
+	.layout {
+		@apply bg-bluegray-50;
+	}
 </style>

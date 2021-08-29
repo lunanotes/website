@@ -23,6 +23,10 @@
 		@apply flex;
 		@apply flex-col;
 		@apply items-center;
+		@apply pb-10;
+		@screen md {
+			@apply p-0;
+		}
 	}
 
 	h1 {
@@ -31,6 +35,10 @@
 		@apply mb-8;
 		@apply font-semibold;
 		@apply tracking-wide;
+		@apply mt-8;
+		@screen md {
+			@apply mt-0;
+		}
 	}
 
 	a.download {

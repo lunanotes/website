@@ -2,6 +2,7 @@
 	import Logo from '$lib/assets/logo.svelte';
 	import Hero from '$lib/partials/Hero.svelte';
 	import Browser from '$lib/partials/Browser.svelte';
+	import Demo from '$lib/partials/Demo.svelte';
 	import Features from '$lib/partials/Features.svelte';
 
 	import { onMount } from 'svelte';
@@ -24,21 +25,26 @@
 				<Browser />
 			{/if}
 		</div>
-		<div class="bg" />
 	</div>
 	<Features />
+	<Demo />
 </div>
 
 <style lang="scss">
 	.app {
 		@apply box-border;
 		@apply w-full;
-		@apply h-screen;
 		.header {
 			@apply relative;
-			@apply px-12;
+			@apply px-6;
 			@apply pt-12;
+			@apply pb-0;
 			@apply bg-bluegray-700;
+			@screen md {
+				@apply py-12;
+
+				@apply px-12;
+			}
 		}
 		.window {
 			@apply relative;
@@ -46,15 +52,10 @@
 			@apply mx-auto;
 			@apply mt-10;
 			@apply z-30;
-		}
-
-		.bg {
-			@apply absolute;
-			@apply inset-x-0;
-			@apply bottom-0;
-			@apply h-32;
-			@apply bg-bluegray-50;
-			@apply z-20;
+			@apply hidden;
+			@screen md {
+				@apply block;
+			}
 		}
 	}
 </style>
