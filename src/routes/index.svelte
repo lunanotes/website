@@ -17,8 +17,8 @@
 <div class="app">
 	{#if showBrowser}
 		<Hero />
+		<Testimonials />
 	{/if}
-	<Testimonials />
 	<CallToAction />
 	<Features />
 	<FooterSection />

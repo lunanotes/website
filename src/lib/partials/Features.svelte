@@ -53,12 +53,13 @@
 		@apply items-center;
 		@apply justify-center;
 		@apply gap-x-20;
-		@apply gap-y-8;
+		@apply gap-y-4;
 		@apply flex-col;
 		@apply py-20;
 		@screen md {
 			@apply grid-cols-2;
 			@apply flex-row;
+			@apply auto-rows-fr;
 			@apply py-20;
 
 			@apply gap-x-20;

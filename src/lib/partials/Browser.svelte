@@ -2,7 +2,7 @@
 	import { fly } from 'svelte/transition';
 </script>
 
-<div class="window" in:fly={{ y: 50, duration: 700, delay: 400 }}>
+<div class="window">
 	<div class="topbar">
 		<span class="dot red" />
 		<span class="dot yellow" />

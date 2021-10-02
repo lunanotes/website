@@ -1,12 +1,14 @@
 <script>
+	import { fly } from 'svelte/transition';
 	import Star from '$lib/assets/icons/Star.svelte';
 
 	export let avatar;
 	export let comment;
 	export let name;
+	export let id;
 </script>
 
-<article>
+<article in:fly={{ y: 20, duration: 200, delay: 900 + 200 * id }}>
 	<header>
 		<p>
 			"{comment}"
@@ -31,6 +33,14 @@
 	article {
 		@apply flex;
 		@apply flex-col;
+
+		@include animation;
+		@apply cursor-pointer;
+		@apply transform;
+		&:hover {
+			@apply scale-105;
+		}
+
 		@screen md {
 			@apply items-center;
 			@apply justify-between;

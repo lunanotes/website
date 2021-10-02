@@ -18,6 +18,30 @@
 	.feature {
 		@apply flex;
 		@apply flex-row;
+		@apply cursor-pointer;
+		@apply h-full;
+
+		@apply px-4;
+		@apply py-4;
+		@apply rounded-2xl;
+
+		@include animation;
+		@apply transform;
+		@apply border-2;
+		@apply border-transparent;
+		&:hover {
+			@apply border-amber-400;
+			@apply bg-amber-50;
+			h3 {
+				@apply text-amber-800;
+			}
+			p {
+				@apply text-amber-500;
+			}
+			.icon {
+				@apply shadow-none;
+			}
+		}
 	}
 
 	.icon {
@@ -29,6 +53,8 @@
 		@apply p-3;
 		@apply rounded-xl;
 		@apply shadow-amber-700-xl;
+
+		@include animation;
 		&:global(svg) {
 			@apply w-auto;
 		}
@@ -43,6 +69,8 @@
 		@apply text-coolgray-700;
 		@apply text-xl;
 		@apply tracking-wider;
+
+		@include animation;
 		@screen md {
 			@apply leading-relaxed;
 		}
@@ -54,6 +82,8 @@
 		@apply font-normal;
 		@apply text-lg;
 		@apply text-bluegray-400;
+
+		@include animation;
 		@screen md {
 			@apply text-base;
 		}

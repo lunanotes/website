@@ -17,16 +17,16 @@
 
 <article>
 	<a
-		in:fly={{ y: 50, duration: 250, delay: 300 }}
+		in:fly={{ y: 50, duration: 400, delay: 600 }}
 		href="https://chrome.google.com/webstore/detail/lunanotes-notas-en-youtub/oehoffnnkgcdacmbkhmlbjedinpampak"
-		class="download"
+		class="download {cta ? 'cta' : 'hero'}"
 		bind:this={button}
 		target="_download"
 	>
 		<Download />
 		{$t('hero.button.text')}
 	</a>
-	<span class="description" in:fly={{ y: 50, duration: 250, delay: 450 }}>
+	<span class="description" in:fly={{ y: 50, duration: 400, delay: 900 }}>
 		{$t('hero.button.helper')}
 	</span>
 </article>
@@ -64,6 +64,9 @@
 
 		@apply ring;
 		@apply ring-offset-white;
+		&.cta {
+			@apply ring-offset-bluegray-100;
+		}
 		@apply ring-transparent;
 		&:hover:not(:active) {
 			@apply ring-amber-300;
@@ -81,7 +84,7 @@
 		@apply text-lg;
 		@apply font-semibold;
 		@screen md {
-			@apply text-base;
+			@apply font-medium;
 		}
 	}
 </style>

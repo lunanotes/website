@@ -7,6 +7,9 @@ import tailwindcss from 'tailwindcss';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: sveltePreprocess({
+		scss: {
+			prependData: `@import 'src/lib/global.scss';`
+		},
 		postcss: {
 			plugins: [tailwindcss(), autoprefixer()]
 		}

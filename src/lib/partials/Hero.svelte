@@ -1,6 +1,5 @@
 <script>
 	import Logo from '$lib/assets/logo.svelte';
-	import Hero from '$lib/assets/Hero.svelte';
 	import Download from '$lib/partials/Download.svelte';
 	import Demo from '$lib/partials/Demo.svelte';
 
@@ -14,10 +13,10 @@
 			<Logo />
 		</div>
 
-		<h1 in:fly={{ y: 50, duration: 250 }}>
+		<h1 in:fly={{ y: 50, duration: 400 }}>
 			{$t('hero.title')}
 		</h1>
-		<p in:fly={{ y: 50, duration: 250, delay: 150 }}>
+		<p in:fly={{ y: 50, duration: 400, delay: 300 }}>
 			{$t('hero.description')}
 		</p>
 		<Download />
