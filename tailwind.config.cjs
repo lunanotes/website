@@ -13,6 +13,7 @@ module.exports = {
 				amber: colors.amber,
 				bluegray: colors.blueGray,
 				truegray: colors.trueGray,
+				coolgray: colors.coolGray,
 				sky: colors.sky
 			}
 		}

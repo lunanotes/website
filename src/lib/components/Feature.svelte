@@ -4,40 +4,55 @@
 	export let description;
 </script>
 
-<div class="feature">
-	<span class="icon">
+<article class="feature">
+	<figure class="icon">
 		<svelte:component this={icon} />
-	</span>
-	<h3>{title}</h3>
-	<p>{description}</p>
-</div>
+	</figure>
+	<div class="feature__body">
+		<h3>{title}</h3>
+		<p>{description}</p>
+	</div>
+</article>
 
 <style lang="scss">
 	.feature {
-		@apply flex-1;
 		@apply flex;
-		@apply flex-col;
-		@apply items-center;
+		@apply flex-row;
 	}
-	span.icon :global(svg) {
-		@apply h-20;
-		@apply mb-4;
+
+	.icon {
+		@apply flex;
+		@apply items-center;
+		@apply bg-amber-400;
+		@apply w-14;
+		@apply h-14;
+		@apply p-3;
+		@apply rounded-xl;
+		@apply shadow-amber-700-lg;
+		&:global(svg) {
+			@apply w-auto;
+		}
+	}
+	.feature__body {
+		@apply flex-1;
+		@apply px-4;
 	}
 
 	h3 {
 		@apply font-semibold;
-		@apply text-yellow-500;
+		@apply text-coolgray-700;
 		@apply text-2xl;
 		@apply tracking-wider;
+		@apply leading-none;
 		@apply mb-2;
-		@apply text-center;
 	}
 
 	p {
 		@apply text-white;
-		@apply tracking-wider;
-		@apply text-center;
+		@apply tracking-wide;
+		@apply font-normal;
 		@apply text-xl;
+		@apply text-bluegray-500;
 		@screen md {
 			@apply text-base;
 		}

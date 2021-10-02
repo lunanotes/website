@@ -45,6 +45,6 @@
 	line,
 	path {
 		@apply stroke-current;
-		@apply text-amber-600;
+		@apply text-white;
 	}
 </style>

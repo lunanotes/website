@@ -3,7 +3,6 @@
 	<polyline
 		points="160 80 192 80 192 112"
 		fill="none"
-		stroke="#fbbf25"
 		stroke-linecap="round"
 		stroke-linejoin="round"
 		stroke-width="16"
@@ -11,7 +10,6 @@
 	<polyline
 		points="96 176 64 176 64 144"
 		fill="none"
-		stroke="#fbbf25"
 		stroke-linecap="round"
 		stroke-linejoin="round"
 		stroke-width="16"
@@ -23,9 +21,16 @@
 		height="160"
 		rx="8"
 		stroke-width="16"
-		stroke="#fbbf25"
 		stroke-linecap="round"
 		stroke-linejoin="round"
 		fill="none"
 	/>
 </svg>
+
+<style>
+	polyline,
+	rect {
+		@apply stroke-current;
+		@apply text-white;
+	}
+</style>

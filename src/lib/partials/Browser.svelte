@@ -23,7 +23,7 @@
 <style lang="scss">
 	.window {
 		@apply rounded-lg;
-		@apply shadow-bluegray-900-xl;
+		box-shadow: 0 40px 50px rgb(7 30 87 / 20%);
 	}
 	.topbar {
 		background: #e8eaed;
@@ -37,12 +37,21 @@
 		@apply space-x-1;
 		@apply px-2;
 		@apply box-border;
+
+		@apply border;
+		@apply border-solid;
+		@apply border-bluegray-200;
 	}
 
 	.bar {
 		@apply bg-white;
 		@apply py-2;
 		@apply px-4;
+
+		@apply border-l;
+		@apply border-r;
+		@apply border-solid;
+		@apply border-bluegray-200;
 	}
 	.searchbar {
 		background: #f1f3f4;

@@ -40,21 +40,28 @@
 
 <style lang="scss">
 	.features {
-		@apply bg-bluegray-700;
 		@apply py-12;
+		@apply mx-auto;
+		@screen lg {
+			@apply w-3/4;
+		}
+		@screen xl {
+			@apply w-3/4;
+		}
 	}
 
 	.features-grid {
 		@apply container;
 		@apply px-10;
 		@apply mx-auto;
-		@apply flex;
+		@apply grid;
 		@apply items-center;
 		@apply justify-center;
 		@apply gap-20;
 		@apply flex-col;
 		@apply pb-20;
 		@screen md {
+			@apply grid-cols-2;
 			@apply flex-row;
 			@apply py-20;
 		}
