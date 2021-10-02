@@ -1,8 +1,10 @@
 <script>
 	import Logo from '$lib/assets/logo.svelte';
-	import { fly } from 'svelte/transition';
+	import Hero from '$lib/assets/Hero.svelte';
+	import Download from '$lib/partials/Download.svelte';
+
 	import { t } from 'svelte-intl-precompile';
-	import Download from '../assets/download.svelte';
+	import { fly } from 'svelte/transition';
 </script>
 
 <header class="cont">
@@ -11,25 +13,16 @@
 			<Logo />
 		</div>
 
-		<h1 in:fly={{ y: 50, duration: 250 }}>The best note taking tool for YouTube.</h1>
+		<h1 in:fly={{ y: 50, duration: 250 }}>
+			{$t('hero.title')}
+		</h1>
 		<p in:fly={{ y: 50, duration: 250, delay: 150 }}>
-			Stop wasting your time on YouTube. LunaNotes lets you take notes while watching any video.
-			Never miss a note again!
+			{$t('hero.description')}
 		</p>
-		<div>
-			<a
-				in:fly={{ y: 50, duration: 250, delay: 300 }}
-				href="https://chrome.google.com/webstore/detail/lunanotes-notas-en-youtub/oehoffnnkgcdacmbkhmlbjedinpampak"
-				class="download"
-			>
-				<Download />
-				{$t('hero.downloadNow')}
-			</a>
-			<span in:fly={{ y: 50, duration: 250, delay: 450 }}>¡Es completamente gratis!</span>
-		</div>
+		<Download />
 	</section>
 	<figure>
-		<img src="/discovery.png" alt="" />
+		<Hero />
 	</figure>
 </header>
 
@@ -61,8 +54,10 @@
 	section {
 		@apply flex-1;
 		@apply flex flex-col justify-center items-start;
+
 		@screen xl {
 			@apply w-5/12;
+			@apply mb-12;
 		}
 		@screen lg {
 			@apply text-left;
@@ -86,57 +81,20 @@
 
 	h1 {
 		color: #334155;
+		line-height: 1.3;
 		@apply text-4xl;
 		@apply text-left;
-		@apply mb-8;
+		@apply mb-4;
 		@apply font-bold;
 		@apply tracking-wide;
 	}
 
 	p {
-		@apply text-coolgray-600;
+		@apply text-coolgray-500;
 		@apply text-left;
-		@apply mb-6;
+		@apply mb-10;
 		@apply font-normal;
 		@apply text-lg;
-	}
-	a.download {
-		@apply bg-amber-400;
-		@apply flex;
-		@apply gap-4;
-		@apply pl-6;
-		@apply pr-8;
-		@apply py-3;
-
-		@apply items-center;
-		@apply justify-center;
-
-		@apply text-amber-900;
-		@apply tracking-widest;
-		@apply font-semibold;
-		@apply rounded-md;
-
-		@apply transition-all;
-		@apply duration-200;
-		@apply transform;
-
-		@apply mb-2;
-
-		@apply ring;
-		@apply ring-offset-white;
-		@apply ring-white;
-		&:hover:not(:active) {
-			@apply ring-amber-300;
-			@apply ring-offset-4;
-		}
-		&:active {
-			@apply scale-95;
-		}
-	}
-
-	span {
-		@apply text-bluegray-400;
-		@apply tracking-wide;
-		font-family: 'Indie Flower', cursive;
+		@apply leading-relaxed;
 	}
 </style>

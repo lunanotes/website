@@ -8,24 +8,20 @@
 
 	const features = [
 		{
-			icon: NoteIcon,
-			title: 'Crea',
-			description: 'Añade notas en cualquier video de YouTube'
+			id: 'create',
+			icon: NoteIcon
 		},
 		{
-			icon: CustomizeIcon,
-			title: 'Personaliza',
-			description: 'Agrega colores, listas, negritas y otros estilos'
+			id: 'customize',
+			icon: CustomizeIcon
 		},
 		{
-			icon: ScreenshotIcon,
-			title: 'Anota',
-			description: 'Haz capturas del video y añade anotaciones sobre ella'
+			id: 'annotate',
+			icon: ScreenshotIcon
 		},
 		{
-			icon: CloudIcon,
-			title: 'Respalda',
-			description: 'Todas tos notas quedan guardadas en la nube'
+			id: 'sync',
+			icon: CloudIcon
 		}
 	];
 </script>
@@ -40,7 +36,6 @@
 
 <style lang="scss">
 	.features {
-		@apply py-12;
 		@apply mx-auto;
 		@screen lg {
 			@apply w-3/4;

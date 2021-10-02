@@ -15,13 +15,14 @@
 		<div class="searchbar">youtube.com</div>
 	</div>
 	<div class="body">
-		<Video />
-		<NoteList />
+		<slot />
 	</div>
 </div>
 
 <style lang="scss">
 	.window {
+		@apply flex-1;
+		@apply max-w-3xl;
 		@apply rounded-lg;
 		box-shadow: 0 40px 50px rgb(7 30 87 / 20%);
 	}
@@ -67,13 +68,11 @@
 
 		@apply relative;
 		@apply w-full;
-		@apply h-96;
 		@apply py-6;
 		@apply px-6;
 		@apply gap-4;
 		@apply box-border;
 		@apply flex;
-		@apply overflow-hidden;
 		@apply rounded-b-lg;
 		background: #f9f9f9;
 	}
