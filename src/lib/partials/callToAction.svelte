@@ -7,7 +7,7 @@
 	<h2>{$t('cta.title')}</h2>
 	<p>{$t('cta.description')}</p>
 
-	<Download />
+	<Download cta={true} />
 </section>
 
 <style lang="scss">

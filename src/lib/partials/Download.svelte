@@ -1,8 +1,18 @@
 <script>
+	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import { t } from 'svelte-intl-precompile';
 
+	import { mixpanel } from '$lib/utils/mixpanel';
 	import Download from '$lib/assets/download.svelte';
+
+	export let cta = false;
+	let button;
+
+	onMount(() => {
+		const event = cta ? 'cta' : 'hero';
+		mixpanel.track_links(button, event);
+	});
 </script>
 
 <article>
@@ -10,6 +20,7 @@
 		in:fly={{ y: 50, duration: 250, delay: 300 }}
 		href="https://chrome.google.com/webstore/detail/lunanotes-notas-en-youtub/oehoffnnkgcdacmbkhmlbjedinpampak"
 		class="download"
+		bind:this={button}
 		target="_download"
 	>
 		<Download />

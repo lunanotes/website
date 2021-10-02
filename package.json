@@ -9,7 +9,6 @@
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
-		"@beyonk/svelte-google-analytics": "^2.2.0",
 		"@sveltejs/adapter-netlify": "^1.0.0-next.18",
 		"@sveltejs/kit": "next",
 		"@tailwindcss/forms": "^0.3.3",
@@ -27,6 +26,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-intl-precompile": "^0.3.3"
+		"mixpanel-browser": "^2.41.0",
+		"svelte-intl-precompile": "^0.3.3",
+		"youtube-player": "^5.5.2"
 	}
 }

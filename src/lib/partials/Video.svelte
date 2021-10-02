@@ -1,39 +1,37 @@
-<div class="video-container">
-  <div class="video">
-    <div class="video__bar">
-      <div class="video__bar-time" />
-    </div>
-  </div>
+<script>
+	import { mixpanel } from '$lib/utils/mixpanel';
+	import { onMount } from 'svelte';
+	import YoutubePlayer from 'youtube-player';
 
-  <div class="title">¡Bienvenid@ a LunaNotes!</div>
-</div>
+	export let videoId;
+	let player;
 
-<style lang="scss">
-  .video-container {
-    @apply w-7/12;
-  }
+	function onPlayerStateChange(event) {
+		const playerStatus = event.data;
 
-  .video {
-    @apply bg-truegray-800;
-    @apply w-full;
-    @apply h-72;
-    @apply relative;
-    &__bar {
-      @apply absolute;
-      @apply bottom-6;
-      @apply inset-x-4;
-      @apply bg-truegray-200;
-      &-time {
-        @apply h-0.5;
-        @apply bg-red-600;
-        @apply w-1/3;
-      }
-    }
-  }
-  .title {
-    @apply font-medium;
-    @apply text-base;
-    @apply pt-2;
-    @apply pl-1;
-  }
-</style>
+		if (playerStatus == -1) {
+			mixpanel.track('video started!');
+			mixpanel.time_event('video buffered!');
+		} else if (playerStatus == 0) {
+			mixpanel.track('video finish!');
+		} else if (playerStatus == 1) {
+			mixpanel.track('playback started!');
+			mixpanel.time_event('video buffered!');
+			mixpanel.time_event('video finish!');
+		} else if (playerStatus == 2) {
+			const timestamp = player.getCurrentTime();
+			mixpanel.track('playback paused!', { timestamp });
+		} else if (playerStatus == 3) {
+			mixpanel.track('video buffered!');
+		} else if (playerStatus == 5) {
+		}
+	}
+
+	onMount(() => {
+		player = YoutubePlayer(player);
+		player.on('stateChange', onPlayerStateChange);
+		player.cueVideoById(videoId);
+	});
+</script>
+
+<div id="youtube-player" bind:this={player} />

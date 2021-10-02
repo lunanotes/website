@@ -1,9 +1,10 @@
 <script>
+	import { mixpanel } from '$lib/utils/mixpanel';
 	import { dev } from '$app/env';
-	import { GoogleAnalytics } from '@beyonk/svelte-google-analytics';
 	import BreakpointHelper from '$lib/utils/BreakpointHelper.svelte';
 
 	import { register, init, getLocaleFromNavigator } from 'svelte-intl-precompile';
+	import { onMount } from 'svelte';
 
 	register('en', () => import('../locales/en.js'));
 	register('es', () => import('../locales/es.js'));
@@ -12,9 +13,12 @@
 		fallbackLocale: 'en',
 		initialLocale: getLocaleFromNavigator()
 	});
+
+	onMount(() => {
+		mixpanel.track('page view');
+	});
 </script>
 
-<GoogleAnalytics properties={['G-PC441RFTC1']} />
 <div class="layout">
 	{#if dev}
 		<BreakpointHelper />
