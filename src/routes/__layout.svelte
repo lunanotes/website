@@ -1,17 +1,21 @@
 <script>
-	import { mixpanel } from '$lib/utils/mixpanel';
+	import { addMessages, init, getLocaleFromNavigator } from 'precompile-intl-runtime';
+	import { onMount } from 'svelte';
+	import { session } from '$app/stores';
 	import { dev } from '$app/env';
+
+	import { mixpanel } from '$lib/utils/mixpanel';
 	import BreakpointHelper from '$lib/utils/BreakpointHelper.svelte';
 
-	import { register, init, getLocaleFromNavigator } from 'svelte-intl-precompile';
-	import { onMount } from 'svelte';
+	import en from '../locales/en';
+	import es from '../locales/es';
 
-	register('en', () => import('../locales/en.js'));
-	register('es', () => import('../locales/es.js'));
+	addMessages('en', en);
+	addMessages('es', es);
 
 	init({
 		fallbackLocale: 'en',
-		initialLocale: getLocaleFromNavigator()
+		initialLocale: getLocaleFromNavigator($session.acceptedLanguage)
 	});
 
 	onMount(() => {

@@ -20,8 +20,10 @@ const config = {
 		adapter: adapter(),
 		target: '#svelte',
 		vite: {
-			plugins: [precompileIntl('locales')]
-		}
+			plugins: [precompileIntl('src/locales')]
+		},
+		router: false,
+		hydrate: false
 	}
 };
 
