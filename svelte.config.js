@@ -22,8 +22,7 @@ const config = {
 		vite: {
 			plugins: [precompileIntl('src/locales')]
 		},
-		router: false,
-		hydrate: false
+		router: false
 	}
 };
 
