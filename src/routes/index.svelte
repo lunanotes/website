@@ -3,6 +3,7 @@
 	import Demo from '$lib/partials/Demo.svelte';
 	import Features from '$lib/partials/Features.svelte';
 	import CallToAction from '$lib/partials/callToAction.svelte';
+	import Testimonials from '$lib/partials/Testimonials.svelte';
 	import FooterSection from '$lib/partials/FooterSection.svelte';
 
 	import { onMount } from 'svelte';
@@ -21,6 +22,7 @@
 	{#if showBrowser}
 		<Demo />
 	{/if}
+	<Testimonials />
 	<CallToAction />
 	<Features />
 	<FooterSection />

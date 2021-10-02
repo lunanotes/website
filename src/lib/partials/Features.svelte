@@ -52,7 +52,8 @@
 		@apply grid;
 		@apply items-center;
 		@apply justify-center;
-		@apply gap-20;
+		@apply gap-x-20;
+		@apply gap-y-16;
 		@apply flex-col;
 		@apply pb-20;
 		@screen md {
