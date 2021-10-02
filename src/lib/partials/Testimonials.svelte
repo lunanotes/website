@@ -28,14 +28,21 @@
 	{/each}
 </section>
 
-<style>
+<style lang="scss">
 	section {
-		@apply grid grid-flow-col grid-cols-3;
+		@apply grid;
 		@apply container;
-		@apply gap-20;
+		@apply gap-12;
 		@apply mx-auto;
-		@apply pt-12;
-		@apply pb-28;
+		@apply pt-28;
+		@apply p-14;
+		@apply pb-20;
+
 		@apply items-end;
+
+		@screen md {
+			@apply gap-20;
+			@apply grid-flow-col grid-cols-3;
+		}
 	}
 </style>

@@ -15,6 +15,7 @@
 		@apply bg-bluegray-100;
 		@apply pt-6;
 		@apply pb-4;
+		@apply px-8;
 		@apply text-center;
 		@apply flex;
 		@apply flex-col;

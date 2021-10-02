@@ -1,8 +1,8 @@
 export default {
 	'cta.description': 'LunaNotes is the easiest way to take notes while watching YouTube videos',
 	'cta.title': 'Stop wasting your time on YouTube!',
-	'feature.anotate.title': 'Annotate',
-	'feature.anotate.description': 'Take screenshots of the video and add annotations on it',
+	'feature.annotate.title': 'Draw',
+	'feature.annotate.description': 'Take screenshots of the video and draw on it',
 	'feature.create.title': 'Create',
 	'feature.create.description': 'Add annotations on any YouTube video',
 	'feature.customize.title': 'Customize',

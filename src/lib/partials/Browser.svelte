@@ -1,8 +1,5 @@
 <script>
 	import { fly } from 'svelte/transition';
-
-	import NoteList from './NoteList.svelte';
-	import Video from './Video.svelte';
 </script>
 
 <div class="window" in:fly={{ y: 50, duration: 700, delay: 400 }}>
@@ -21,9 +18,11 @@
 
 <style lang="scss">
 	.window {
+		@apply mt-16;
 		@apply flex-1;
 		@apply max-w-3xl;
 		@apply rounded-lg;
+		@apply h-full;
 		box-shadow: 0 40px 50px rgb(7 30 87 / 20%);
 	}
 	.topbar {

@@ -1,6 +1,5 @@
 <script>
 	import Hero from '$lib/partials/Hero.svelte';
-	import Demo from '$lib/partials/Demo.svelte';
 	import Features from '$lib/partials/Features.svelte';
 	import CallToAction from '$lib/partials/callToAction.svelte';
 	import Testimonials from '$lib/partials/Testimonials.svelte';
@@ -18,9 +17,6 @@
 <div class="app">
 	{#if showBrowser}
 		<Hero />
-	{/if}
-	{#if showBrowser}
-		<Demo />
 	{/if}
 	<Testimonials />
 	<CallToAction />

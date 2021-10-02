@@ -5,7 +5,7 @@
 	import Download from '$lib/assets/download.svelte';
 </script>
 
-<span>
+<article>
 	<a
 		in:fly={{ y: 50, duration: 250, delay: 300 }}
 		href="https://chrome.google.com/webstore/detail/lunanotes-notas-en-youtub/oehoffnnkgcdacmbkhmlbjedinpampak"
@@ -18,9 +18,17 @@
 	<span class="description" in:fly={{ y: 50, duration: 250, delay: 450 }}>
 		{$t('hero.button.helper')}
 	</span>
-</span>
+</article>
 
 <style lang="scss">
+	article {
+		@apply w-full;
+		@apply text-center;
+		@screen md {
+			@apply w-auto;
+		}
+	}
+
 	a.download {
 		@apply bg-amber-400;
 		@apply flex;
@@ -59,5 +67,10 @@
 		@apply text-bluegray-400;
 		@apply tracking-wide;
 		font-family: 'Indie Flower', cursive;
+		@apply text-lg;
+		@apply font-semibold;
+		@screen md {
+			@apply text-base;
+		}
 	}
 </style>

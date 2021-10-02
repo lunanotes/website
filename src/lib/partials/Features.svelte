@@ -53,13 +53,16 @@
 		@apply items-center;
 		@apply justify-center;
 		@apply gap-x-20;
-		@apply gap-y-16;
+		@apply gap-y-8;
 		@apply flex-col;
-		@apply pb-20;
+		@apply py-20;
 		@screen md {
 			@apply grid-cols-2;
 			@apply flex-row;
 			@apply py-20;
+
+			@apply gap-x-20;
+			@apply gap-y-16;
 		}
 	}
 </style>

@@ -2,20 +2,18 @@
 	import Browser from './Browser.svelte';
 </script>
 
-<section>
-	<Browser>
-		<div class="videoWrapper">
-			<iframe
-				class="demo"
-				src="https://www.youtube.com/embed/4YuA5cTFtAw"
-				title="YouTube video player"
-				frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen
-			/>
-		</div>
-	</Browser>
-</section>
+<Browser>
+	<div class="videoWrapper">
+		<iframe
+			class="demo"
+			src="https://www.youtube.com/embed/4YuA5cTFtAw"
+			title="YouTube video player"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen
+		/>
+	</div>
+</Browser>
 
 <style lang="scss">
 	section {

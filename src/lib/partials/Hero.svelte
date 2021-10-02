@@ -2,6 +2,7 @@
 	import Logo from '$lib/assets/logo.svelte';
 	import Hero from '$lib/assets/Hero.svelte';
 	import Download from '$lib/partials/Download.svelte';
+	import Demo from '$lib/partials/Demo.svelte';
 
 	import { t } from 'svelte-intl-precompile';
 	import { fly } from 'svelte/transition';
@@ -21,16 +22,10 @@
 		</p>
 		<Download />
 	</section>
-	<figure>
-		<Hero />
-	</figure>
+	<Demo />
 </header>
 
 <style lang="scss">
-	.cont {
-		@apply mx-auto;
-		@apply container;
-	}
 	.logo {
 		@apply mt-6;
 		@apply mb-auto;
@@ -39,15 +34,13 @@
 		@apply flex;
 		@apply flex-col;
 		@apply justify-between;
-		@apply gap-6;
+		@apply gap-4;
+		@apply px-6;
+		@apply mx-auto;
+		@apply container;
 		@screen lg {
 			@apply flex-row;
-		}
-		@screen md {
-			@apply gap-16;
-		}
-		@screen sm {
-			@apply gap-10;
+			@apply gap-20;
 		}
 	}
 
@@ -68,23 +61,13 @@
 		}
 	}
 
-	figure {
-		@apply flex-1;
-		@apply h-48;
-		@screen xl {
-			@apply w-1/2;
-		}
-		@screen lg {
-			@apply h-auto;
-		}
-	}
-
 	h1 {
 		color: #334155;
 		line-height: 1.3;
 		@apply text-4xl;
 		@apply text-left;
 		@apply mb-4;
+		@apply mt-6;
 		@apply font-bold;
 		@apply tracking-wide;
 	}

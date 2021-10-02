@@ -43,14 +43,16 @@
 		@apply text-coolgray-700;
 		@apply text-xl;
 		@apply tracking-wider;
-		@apply leading-relaxed;
+		@screen md {
+			@apply leading-relaxed;
+		}
 	}
 
 	p {
 		@apply text-white;
 		@apply tracking-wide;
 		@apply font-normal;
-		@apply text-xl;
+		@apply text-lg;
 		@apply text-bluegray-400;
 		@screen md {
 			@apply text-base;
