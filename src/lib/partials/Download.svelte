@@ -18,7 +18,9 @@
 <article>
 	<a
 		in:fly={{ y: 50, duration: 400, delay: 600 }}
-		href="https://chrome.google.com/webstore/detail/lunanotes-notas-en-youtub/oehoffnnkgcdacmbkhmlbjedinpampak"
+		href="https://chrome.google.com/webstore/detail/lunanotes-notas-en-youtub/oehoffnnkgcdacmbkhmlbjedinpampak?utm_source=landing&utm_medium={cta
+			? 'cta'
+			: 'hero'}&utm_campaign=click"
 		class="download {cta ? 'cta' : 'hero'}"
 		bind:this={button}
 		target="_download"
