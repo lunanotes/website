@@ -4,7 +4,7 @@
 
 <footer>
 	© 2021 - Lunanotes. {$t('footer.createdBy')}
-	<a href="https://jfdelarosa.dev" target="_blank">jfdelarosa</a>.
+	<a href="https://jfdelarosa.dev" target="_blank" rel="noreferrer">jfdelarosa</a>.
 </footer>
 
 <style>

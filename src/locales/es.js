@@ -9,11 +9,14 @@ export default {
 	'feature.customize.title': 'Personaliza',
 	'feature.customize.description': 'Agrega colores, listas, negritas y otros estilos',
 	'feature.sync.title': 'Respalda',
-	'feature.sync.description': 'Todas tos notas quedan guardadas en la nube',
+	'feature.sync.description': 'Todas tus notas quedan guardadas en la nube',
 	'footer.createdBy': 'Creado con ❤️ por',
 	'hero.button.helper': '(Es completamente gratis)',
 	'hero.button.text': '¡Descarga ahora!',
 	'hero.description':
 		'LunaNotes te permite tomar notas mientras ves cualquier vídeo. ¡No vuelvas a perderte un momento destacado!',
-	'hero.title': 'LunaNotes es la mejor herramienta para tomar notas en YouTube.'
+	'hero.title': 'LunaNotes es la mejor herramienta para tomar notas en YouTube.',
+	'meta.description':
+		'La mejor herramienta para tomar notas en YouTube. LunaNotes es la extensión de Chrome más sencilla y potente para tomar notas mientras ves cualquier video en YouTube.',
+	'meta.title': 'LunaNotes - Notas en YouTube'
 };
