@@ -12,7 +12,7 @@ export default {
 	'feature.sync.description': 'Todas tus notas quedan guardadas en la nube',
 	'footer.createdBy': 'Creado con ❤️ por',
 	'hero.button.helper': '(Es completamente gratis)',
-	'hero.button.text': '¡Descarga ahora!',
+	'hero.button.text': 'Añadir a Chrome',
 	'hero.description':
 		'LunaNotes te permite tomar notas mientras ves cualquier vídeo. ¡No vuelvas a perderte un momento destacado!',
 	'hero.title': 'LunaNotes es la mejor herramienta para tomar notas en YouTube.',
