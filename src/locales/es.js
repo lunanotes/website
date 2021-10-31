@@ -26,7 +26,7 @@ export default {
 	'hero.button.text': 'Añadir a Chrome',
 	'hero.description':
 		'LunaNotes te permite tomar notas mientras ves cualquier vídeo. ¡No vuelvas a perderte un momento destacado!',
-	'hero.title': 'LunaNotes es la mejor herramienta para tomar notas en YouTube™.',
+	'hero.title': 'LunaNotes es la mejor herramienta para tomar notas en YouTube™',
 	'meta.description':
 		'La mejor herramienta para tomar notas en YouTube™. LunaNotes es la extensión de Chrome más sencilla y potente para tomar notas mientras ves cualquier video en YouTube™.',
 	'meta.title': 'LunaNotes - Toma notas en YouTube™'
