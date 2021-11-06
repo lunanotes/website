@@ -10,7 +10,7 @@ export default {
 		'<p>Yes, LunaNotes is compatible with Edge, Opera, Vivaldi and Brave. However, LunaNotes is primarily tested on Chrome.</p>',
 	'faq.question.3': 'How can I report a bug or ask for a feature?',
 	'faq.answer.3':
-		'<p>You can get in touch <a target="_BLANK" href="https://docs.google.com/forms/d/e/1FAIpQLSe4RVQyRUm36C0tJl8Gkgm2GsXGmHFXeMseyYr92uiaMeKJxQ/viewform?usp=sf_link">Here</a>.',
+		'<p>You can get in touch <a target="_BLANK" href="https://docs.google.com/forms/d/e/1FAIpQLSe4RVQyRUm36C0tJl8Gkgm2GsXGmHFXeMseyYr92uiaMeKJxQ/viewform?usp=sf_link">Here</a>.</p>',
 	'faq.question.4': 'How can I support the project?',
 	'faq.answer.4':
 		'<p>You can give us a <a target="_BLANK" href="https://chrome.google.com/webstore/detail/lunanotes-youtube-video-n/oehoffnnkgcdacmbkhmlbjedinpampak?hl=en&utm_source=landing&utm_medium=faq&utm_campaign=click">review on the webstore</a> or <a href="https://twitter.com/LunaNotesApp">follow us on twitter</a>.</p>',
