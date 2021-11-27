@@ -1,6 +1,6 @@
 import precompileIntl from 'svelte-intl-precompile/sveltekit-plugin.js';
 import sveltePreprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-netlify';
+import adapter from '@sveltejs/adapter-vercel';
 import autoprefixer from 'autoprefixer';
 import tailwindcss from 'tailwindcss';
 
