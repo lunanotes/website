@@ -10,6 +10,7 @@
 
 	import en from '../locales/en';
 	import es from '../locales/es';
+	const token = import.meta.env.VITE_SPLITBEE_TOKEN;
 
 	addMessages('en', en);
 	addMessages('es', es);
@@ -21,7 +22,7 @@
 
 	onMount(() => {
 		splitbee.init({
-			token: 'Z6ZB9K7VU8CG',
+			token,
 			disableCookie: false
 		});
 	});
