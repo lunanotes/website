@@ -27,7 +27,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"mixpanel-browser": "^2.41.0",
+		"@splitbee/web": "^0.3.0",
 		"svelte-intl-precompile": "^0.4.2",
 		"youtube-player": "^5.5.2"
 	}

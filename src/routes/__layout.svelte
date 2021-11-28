@@ -4,12 +4,13 @@
 	import { session } from '$app/stores';
 	import { dev } from '$app/env';
 
-	import { mixpanel } from '$lib/utils/mixpanel';
+	import splitbee from '@splitbee/web';
 	import BreakpointHelper from '$lib/utils/BreakpointHelper.svelte';
 	import Metatags from '$lib/utils/Metatags.svelte';
 
 	import en from '../locales/en';
 	import es from '../locales/es';
+	const token = import.meta.env.VITE_SPLITBEE_TOKEN;
 
 	addMessages('en', en);
 	addMessages('es', es);
@@ -20,7 +21,10 @@
 	});
 
 	onMount(() => {
-		mixpanel.track('page view');
+		splitbee.init({
+			token,
+			disableCookie: false
+		});
 	});
 </script>
 

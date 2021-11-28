@@ -1,29 +1,26 @@
 <script>
-	import { mixpanel } from '$lib/utils/mixpanel';
+	import splitbee from '@splitbee/web';
 	import { onMount } from 'svelte';
 	import YoutubePlayer from 'youtube-player';
 
 	export let videoId;
 	let player;
+	let videoStartEventTracked = false;
+	let videoEndEventTracked = false;
 
 	function onPlayerStateChange(event) {
 		const playerStatus = event.data;
 
-		if (playerStatus == -1) {
-			mixpanel.track('video started!');
-			mixpanel.time_event('video buffered!');
-		} else if (playerStatus == 0) {
-			mixpanel.track('video finish!');
+		if (playerStatus == 0) {
+			if (!videoEndEventTracked) {
+				videoEndEventTracked = true;
+				splitbee.track('Video end');
+			}
 		} else if (playerStatus == 1) {
-			mixpanel.track('playback started!');
-			mixpanel.time_event('video buffered!');
-			mixpanel.time_event('video finish!');
-		} else if (playerStatus == 2) {
-			const timestamp = player.getCurrentTime();
-			mixpanel.track('playback paused!', { timestamp });
-		} else if (playerStatus == 3) {
-			mixpanel.track('video buffered!');
-		} else if (playerStatus == 5) {
+			if (!videoStartEventTracked) {
+				videoStartEventTracked = true;
+				splitbee.track('Video star');
+			}
 		}
 	}
 
