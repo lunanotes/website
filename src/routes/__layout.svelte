@@ -4,7 +4,7 @@
 	import { session } from '$app/stores';
 	import { dev } from '$app/env';
 
-	import { mixpanel } from '$lib/utils/mixpanel';
+	import splitbee from '@splitbee/web';
 	import BreakpointHelper from '$lib/utils/BreakpointHelper.svelte';
 	import Metatags from '$lib/utils/Metatags.svelte';
 
@@ -20,7 +20,10 @@
 	});
 
 	onMount(() => {
-		mixpanel.track('page view');
+		splitbee.init({
+			token: 'Z6ZB9K7VU8CG',
+			disableCookie: false
+		});
 	});
 </script>
 

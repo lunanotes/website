@@ -1,29 +1,20 @@
 <script>
-	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import { t } from 'svelte-intl-precompile';
-
-	import { mixpanel } from '$lib/utils/mixpanel';
 	import Download from '$lib/assets/download.svelte';
 
 	export let cta = false;
-	let button;
-
-	onMount(() => {
-		const event = cta ? 'cta' : 'hero';
-		mixpanel.track_links(button, event);
-	});
 </script>
 
 <article>
 	<a
 		in:fly={{ y: 50, duration: 400, delay: 600 }}
+		data-splitbee-event="Webstore"
+		data-splitbee-event-type={cta ? 'cta' : 'hero'}
 		href="https://chrome.google.com/webstore/detail/lunanotes-notas-en-youtub/oehoffnnkgcdacmbkhmlbjedinpampak?utm_source=landing&utm_medium={cta
 			? 'cta'
 			: 'hero'}&utm_campaign=click"
 		class="download {cta ? 'cta' : 'hero'}"
-		bind:this={button}
-		target="_download"
 	>
 		<Download />
 		{$t('hero.button.text')}
