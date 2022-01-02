@@ -2,20 +2,17 @@
 	import { fly } from 'svelte/transition';
 	import Star from '$lib/assets/icons/Star.svelte';
 
-	export let avatar;
-	export let comment;
-	export let name;
-	export let id;
+	export let blok;
 </script>
 
-<article in:fly={{ y: 20, duration: 200, delay: 900 + 200 * id }}>
+<article in:fly={{ y: 20, duration: 200, delay: 900 + 200 * blok.consecutive }}>
 	<header>
 		<p>
-			"{comment}"
+			"{blok.comment}"
 		</p>
 	</header>
 	<footer>
-		<img src="{avatar}=s40" alt={name} />
+		<img src="{blok.avatar}=s40" alt={blok.name} />
 		<div>
 			<div class="stars">
 				{#each [0, 1, 2, 3, 4] as n}
@@ -23,7 +20,7 @@
 				{/each}
 			</div>
 			<span>
-				{name}
+				{blok.name}
 			</span>
 		</div>
 	</footer>

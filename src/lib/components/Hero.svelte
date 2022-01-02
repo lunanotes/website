@@ -1,7 +1,8 @@
 <script>
+	import getComponent from '$lib/components/storyblok/index';
+	import Title from '$lib/components/storyblok/Title.svelte';
 	import { editable } from '$lib/utils/directives';
 	import Logo from '$lib/assets/logo.svelte';
-	import Download from '$lib/partials/Download.svelte';
 	import Demo from '$lib/partials/Demo.svelte';
 
 	import { fly } from 'svelte/transition';
@@ -15,13 +16,13 @@
 			<Logo />
 		</div>
 
-		<h1 in:fly={{ y: 50, duration: 400 }}>
-			{blok.title}
-		</h1>
-		<p in:fly={{ y: 50, duration: 400, delay: 300 }}>
-			{blok.description}
-		</p>
-		<Download />
+		{#if blok.body}
+			{#each blok.body as blok}
+				<div class="column">
+					<svelte:component this={getComponent(blok.component)} {blok} />
+				</div>
+			{/each}
+		{/if}
 	</section>
 	<Demo />
 </header>
@@ -60,25 +61,5 @@
 		@screen sm {
 			@apply text-center;
 		}
-	}
-
-	h1 {
-		color: #334155;
-		line-height: 1.3;
-		@apply text-4xl;
-		@apply text-left;
-		@apply mb-4;
-		@apply mt-6;
-		@apply font-bold;
-		@apply tracking-wide;
-	}
-
-	p {
-		@apply text-gray-500;
-		@apply text-left;
-		@apply mb-10;
-		@apply font-normal;
-		@apply text-lg;
-		@apply leading-relaxed;
 	}
 </style>

@@ -1,5 +1,5 @@
 <script>
-	import Testimonial from '$lib/components/Testimonial.svelte';
+	import Testimonial from '$lib/components/storyblok/Testimonial.svelte';
 	import { onMount } from 'svelte';
 
 	const testimonials = [

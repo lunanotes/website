@@ -1,8 +1,6 @@
 <script>
-	import Hero from '$lib/components/Hero.svelte';
 	import Features from '$lib/partials/Features.svelte';
 	import CallToAction from '$lib/partials/callToAction.svelte';
-	import Testimonials from '$lib/partials/Testimonials.svelte';
 	import Faq from '$lib/partials/Faq.svelte';
 	import FooterSection from '$lib/partials/FooterSection.svelte';
 
@@ -17,8 +15,8 @@
 
 <div class="app">
 	{#if showBrowser}
-		<Hero />
-		<Testimonials />
+		<!-- <Hero /> -->
+		<!-- <Testimonials /> -->
 	{/if}
 	<CallToAction />
 	<Features />

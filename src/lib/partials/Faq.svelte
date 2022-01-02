@@ -3,7 +3,7 @@
 </script> -->
 
 <section id="faq">
-	<h2>{$t('faq.title')}</h2>
+	<h2>titulo</h2>
 	<div class="faq-list">
 		{#each [1, 2, 3, 4] as i}
 			<div>FAQ item</div>

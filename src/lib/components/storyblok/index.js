@@ -5,6 +5,10 @@ import Page from './Page.svelte'
 import NotFound from './404.svelte'
 import CallToAction from "./CallToAction.svelte";
 import Button from "./Button.svelte";
+import Title from "./Title.svelte";
+import Handwrite from "./Handwrite.svelte";
+import Paragraph from "./Paragraph.svelte";
+import Testimonial from "./Testimonial.svelte";
 import Hero from "../Hero.svelte"
 
 const Components = {
@@ -14,7 +18,11 @@ const Components = {
   page: Page,
   call_to_action: CallToAction,
   Hero,
-  Button
+  Button,
+  Handwrite,
+  Title,
+  Testimonial,
+  Paragraph
 }
 
 export default component => {

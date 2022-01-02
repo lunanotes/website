@@ -25,13 +25,6 @@
 		}
 	}
 
-	h2 {
-		color: #334155;
-		@apply text-3xl;
-		@apply font-bold;
-		@apply mb-2;
-	}
-
 	p {
 		@apply text-slate-500;
 		@apply text-lg;
