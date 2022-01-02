@@ -40,7 +40,7 @@
 
 		@apply border;
 		@apply border-solid;
-		@apply border-bluegray-200;
+		@apply border-slate-200;
 	}
 
 	.bar {
@@ -51,7 +51,7 @@
 		@apply border-l;
 		@apply border-r;
 		@apply border-solid;
-		@apply border-bluegray-200;
+		@apply border-slate-200;
 	}
 	.searchbar {
 		background: #f1f3f4;
@@ -63,7 +63,7 @@
 	.body {
 		@apply border;
 		@apply border-solid;
-		@apply border-bluegray-200;
+		@apply border-slate-200;
 
 		@apply relative;
 		@apply w-full;

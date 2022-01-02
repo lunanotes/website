@@ -25,10 +25,10 @@
 
 		@apply border;
 		@apply border-solid;
-		@apply border-bluegray-200;
+		@apply border-slate-200;
 
 		&__content {
-			@apply text-bluegray-700;
+			@apply text-slate-700;
 			@apply text-xs;
 			:global(p) {
 				@apply m-0;
@@ -39,6 +39,6 @@
 		@apply text-xs;
 		@apply mb-0.5;
 		@apply inline-block;
-		@apply text-bluegray-400;
+		@apply text-slate-400;
 	}
 </style>

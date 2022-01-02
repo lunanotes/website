@@ -1,23 +1,25 @@
 <script>
+	import { editable } from '$lib/utils/directives';
 	import Logo from '$lib/assets/logo.svelte';
 	import Download from '$lib/partials/Download.svelte';
 	import Demo from '$lib/partials/Demo.svelte';
 
-	import { t } from 'svelte-intl-precompile';
 	import { fly } from 'svelte/transition';
+
+	export let blok;
 </script>
 
-<header class="cont">
+<header class="cont" use:editable={blok}>
 	<section>
 		<div class="logo">
 			<Logo />
 		</div>
 
 		<h1 in:fly={{ y: 50, duration: 400 }}>
-			{$t('hero.title')}
+			{blok.title}
 		</h1>
 		<p in:fly={{ y: 50, duration: 400, delay: 300 }}>
-			{$t('hero.description')}
+			{blok.description}
 		</p>
 		<Download />
 	</section>
@@ -72,7 +74,7 @@
 	}
 
 	p {
-		@apply text-coolgray-500;
+		@apply text-gray-500;
 		@apply text-left;
 		@apply mb-10;
 		@apply font-normal;

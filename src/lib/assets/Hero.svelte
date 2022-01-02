@@ -17,7 +17,7 @@
 		}
 		.st2 {
 			@apply fill-current;
-			@apply text-bluegray-300;
+			@apply text-slate-300;
 		}
 		.st3 {
 			fill: #ffffff;

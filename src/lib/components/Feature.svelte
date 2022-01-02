@@ -1,5 +1,4 @@
 <script>
-	import { t } from 'precompile-intl-runtime';
 	export let icon;
 	export let id;
 </script>
@@ -9,8 +8,8 @@
 		<svelte:component this={icon} />
 	</figure>
 	<div class="feature__body">
-		<h3>{$t(`feature.${id}.title`)}</h3>
-		<p>{$t(`feature.${id}.description`)}</p>
+		<h3>title</h3>
+		<p>description</p>
 	</div>
 </article>
 
@@ -52,7 +51,7 @@
 		@apply h-14;
 		@apply p-3;
 		@apply rounded-xl;
-		@apply shadow-amber-700-xl;
+		@apply shadow-amber-700;
 
 		@include animation;
 		&:global(svg) {
@@ -66,7 +65,7 @@
 
 	h3 {
 		@apply font-semibold;
-		@apply text-coolgray-700;
+		@apply text-gray-700;
 		@apply text-xl;
 		@apply tracking-wider;
 
@@ -81,7 +80,7 @@
 		@apply tracking-wide;
 		@apply font-normal;
 		@apply text-lg;
-		@apply text-bluegray-400;
+		@apply text-slate-400;
 
 		@include animation;
 		@screen md {

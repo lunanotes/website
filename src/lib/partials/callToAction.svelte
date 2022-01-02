@@ -1,18 +1,17 @@
 <script>
 	import Download from '$lib/partials/Download.svelte';
-	import { t } from 'precompile-intl-runtime';
 </script>
 
 <section>
-	<h2>{$t('cta.title')}</h2>
-	<p>{$t('cta.description')}</p>
+	<h2>title</h2>
+	<p>description</p>
 
 	<Download cta={true} />
 </section>
 
 <style lang="scss">
 	section {
-		@apply bg-bluegray-100;
+		@apply bg-slate-100;
 		@apply pt-6;
 		@apply pb-4;
 		@apply px-8;
@@ -34,7 +33,7 @@
 	}
 
 	p {
-		@apply text-bluegray-500;
+		@apply text-slate-500;
 		@apply text-lg;
 		@apply mb-8;
 	}

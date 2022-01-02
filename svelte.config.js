@@ -1,4 +1,3 @@
-import precompileIntl from 'svelte-intl-precompile/sveltekit-plugin.js';
 import sveltePreprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-vercel';
 import autoprefixer from 'autoprefixer';
@@ -16,13 +15,10 @@ const config = {
 	}),
 
 	kit: {
+		ssr: true,
 		// hydrate the <div id="svelte"> element in src/app.html
 		adapter: adapter(),
 		target: '#svelte',
-		vite: {
-			plugins: [precompileIntl('src/locales')]
-		},
-		router: false
 	}
 };
 

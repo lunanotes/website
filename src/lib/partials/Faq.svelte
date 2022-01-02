@@ -1,22 +1,22 @@
-<script>
-	import { t } from 'precompile-intl-runtime';
+<!-- <script>
 	import FaqItem from '$lib/components/FaqItem.svelte';
-</script>
+</script> -->
 
 <section id="faq">
 	<h2>{$t('faq.title')}</h2>
 	<div class="faq-list">
 		{#each [1, 2, 3, 4] as i}
-			<FaqItem question={$t(`faq.question.${i}`)}>
+			<div>FAQ item</div>
+			<!-- <FaqItem question={$t(`faq.question.${i}`)}>
 				{@html $t(`faq.answer.${i}`)}
-			</FaqItem>
+			</FaqItem> -->
 		{/each}
 	</div>
 </section>
 
 <style lang="scss">
 	section {
-		@apply bg-bluegray-100;
+		@apply bg-slate-100;
 		@apply p-8;
 		@screen lg {
 			@apply px-0;
@@ -25,7 +25,7 @@
 	}
 
 	h2 {
-		@apply text-bluegray-600;
+		@apply text-slate-600;
 		@apply text-center;
 		@apply text-2xl;
 		@apply font-bold;

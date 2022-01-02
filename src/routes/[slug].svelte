@@ -1,9 +1,10 @@
 <script context="module">
 	import client, { defaultRequestConfig as reqConfig } from '$lib/utils/storyblok';
 
-	export async function load() {
+	export async function load({ params }) {
 		try {
-			const response = await client.get('cdn/stories/home', reqConfig);
+			const { slug } = params;
+			const response = await client.get('cdn/stories/' + slug, reqConfig);
 
 			return {
 				props: {
@@ -21,6 +22,7 @@
 </script>
 
 <script>
+	import { browser } from '$app/env';
 	import getComponent from '$lib/components/storyblok/index';
 	export let story = {};
 </script>
@@ -29,6 +31,6 @@
 	<title>{story.name}</title>
 </svelte:head>
 
-{#if story?.content?.component}
+{#if browser && story?.content?.component}
 	<svelte:component this={getComponent(story.content.component)} blok={story.content} />
 {/if}

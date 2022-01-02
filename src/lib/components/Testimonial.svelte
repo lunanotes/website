@@ -60,7 +60,7 @@
 		}
 	}
 	p {
-		@apply text-bluegray-500;
+		@apply text-slate-500;
 		@apply italic;
 		@apply mb-5;
 		@screen md {
@@ -71,7 +71,7 @@
 		@apply rounded-full;
 		@apply h-10;
 		@apply w-10;
-		@apply shadow-bluegray-600-md;
+		@apply shadow-slate-600;
 		@apply mr-4;
 
 		@screen md {
@@ -80,7 +80,7 @@
 	}
 	span {
 		@apply text-sm;
-		@apply text-bluegray-400;
+		@apply text-slate-400;
 		@apply tracking-wide;
 	}
 	.stars {

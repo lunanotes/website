@@ -1,35 +1,37 @@
 <script>
 	import { fly } from 'svelte/transition';
+	import { editable } from '$lib/utils/directives';
 	import Download from '$lib/assets/download.svelte';
 
-	export let cta = false;
+	export let blok;
 </script>
 
-<article>
+{#if blok.link}
 	<a
 		in:fly={{ y: 50, duration: 400, delay: 600 }}
-		data-splitbee-event="Webstore"
-		data-splitbee-event-type={cta ? 'cta' : 'hero'}
-		href="https://chrome.google.com/webstore/detail/lunanotes-notas-en-youtub/oehoffnnkgcdacmbkhmlbjedinpampak?utm_source=landing&utm_medium={cta
-			? 'cta'
-			: 'hero'}&utm_campaign=click"
-		class="download {cta ? 'cta' : 'hero'}"
+		use:editable={blok}
+		data-splitbee-event={blok.event}
+		data-splitbee-event-type={blok.event_type}
+		href={blok.link.url}
+		class="download"
 	>
 		<Download />
-		button text
+		{blok.label}
 	</a>
-	<span class="description" in:fly={{ y: 50, duration: 400, delay: 900 }}> button helper </span>
-</article>
+{:else}
+	<button
+		in:fly={{ y: 50, duration: 400, delay: 600 }}
+		use:editable={blok}
+		data-splitbee-event={blok.event}
+		data-splitbee-event-type={blok.event_type}
+		class="download"
+	>
+		<Download />
+		{blok.label}
+	</button>
+{/if}
 
 <style lang="scss">
-	article {
-		@apply w-full;
-		@apply text-center;
-		@screen md {
-			@apply w-auto;
-		}
-	}
-
 	a.download {
 		@apply bg-amber-400;
 		@apply flex;
@@ -64,17 +66,6 @@
 		}
 		&:active {
 			@apply scale-95;
-		}
-	}
-
-	.description {
-		@apply text-slate-400;
-		@apply tracking-wide;
-		font-family: 'Indie Flower', cursive;
-		@apply text-lg;
-		@apply font-semibold;
-		@screen md {
-			@apply font-medium;
 		}
 	}
 </style>

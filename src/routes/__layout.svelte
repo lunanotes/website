@@ -1,24 +1,26 @@
+<script context="module">
+	import client, { defaultRequestConfig as reqConfig } from '$lib/utils/storyblok';
+
+	export async function load() {
+		const response = await client.getAll('cdn/stories', reqConfig);
+
+		return { stories: response || [] };
+	}
+</script>
+
 <script>
-	import { addMessages, init, getLocaleFromNavigator } from 'precompile-intl-runtime';
 	import { onMount } from 'svelte';
-	import { session } from '$app/stores';
 	import { dev } from '$app/env';
 
 	import splitbee from '@splitbee/web';
 	import BreakpointHelper from '$lib/utils/BreakpointHelper.svelte';
 	import Metatags from '$lib/utils/Metatags.svelte';
+	import Nav from '$lib/components/Nav.svelte';
 
-	import en from '../locales/en';
-	import es from '../locales/es';
 	const token = import.meta.env.VITE_SPLITBEE_TOKEN;
 
-	addMessages('en', en);
-	addMessages('es', es);
-
-	init({
-		fallbackLocale: 'en',
-		initialLocale: getLocaleFromNavigator($session.acceptedLanguage)
-	});
+	export let stories = [];
+	export let segment;
 
 	onMount(() => {
 		splitbee.init({
@@ -32,6 +34,7 @@
 	{#if dev}
 		<BreakpointHelper />
 	{/if}
+	<Nav {segment} {stories} />
 	<slot />
 </div>
 
@@ -51,4 +54,46 @@
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;
+
+	@import url('https://fonts.googleapis.com/css?family=Lato');
+
+	.root {
+		max-width: 960px;
+		margin: 0 auto;
+		font-family: 'Lato', sans-serif;
+		margin-top: 120px;
+	}
+
+	.teaser {
+		text-align: center;
+	}
+
+	.grid {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		list-style: none;
+		padding: 0;
+
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	.rebuilding {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		text-align: center;
+		background: green;
+		padding: 10px;
+		color: #fff;
+	}
+
+	footer {
+		text-align: center;
+	}
 </style>
