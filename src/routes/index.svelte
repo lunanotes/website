@@ -3,7 +3,7 @@
 
 	export async function load() {
 		try {
-			const response = await client.get('cdn/stories/home', reqConfig);
+			const response = await client.get('cdn/stories/index', reqConfig);
 
 			return {
 				props: {

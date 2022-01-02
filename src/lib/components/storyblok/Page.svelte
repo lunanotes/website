@@ -4,7 +4,11 @@
 </script>
 
 <div>
-	{#each blok.body as blok}
-		<svelte:component this={getComponent(blok.component)} {blok} />
-	{/each}
+	{#if blok.body}
+		{#each blok.body as blok}
+			<svelte:component this={getComponent(blok.component)} {blok} />
+		{/each}
+	{:else}
+		<p>No content</p>
+	{/if}
 </div>

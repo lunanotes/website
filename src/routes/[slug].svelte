@@ -22,7 +22,6 @@
 </script>
 
 <script>
-	import { browser } from '$app/env';
 	import getComponent from '$lib/components/storyblok/index';
 	export let story = {};
 </script>
@@ -31,6 +30,6 @@
 	<title>{story.name}</title>
 </svelte:head>
 
-{#if browser && story?.content?.component}
+{#if story?.content?.component}
 	<svelte:component this={getComponent(story.content.component)} blok={story.content} />
 {/if}

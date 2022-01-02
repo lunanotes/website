@@ -4,7 +4,15 @@
 	export async function load() {
 		const response = await client.getAll('cdn/stories', reqConfig);
 
-		return { stories: response || [] };
+		let stories =
+			response.sort((a, b) => {
+				return a.position - b.position;
+			}) || [];
+		return {
+			props: {
+				stories
+			}
+		};
 	}
 </script>
 
@@ -13,6 +21,7 @@
 	import { dev } from '$app/env';
 
 	import splitbee from '@splitbee/web';
+	import Logo from '$lib/assets/logo.svelte';
 	import BreakpointHelper from '$lib/utils/BreakpointHelper.svelte';
 	import Metatags from '$lib/utils/Metatags.svelte';
 	import Nav from '$lib/components/Nav.svelte';
@@ -34,7 +43,12 @@
 	{#if dev}
 		<BreakpointHelper />
 	{/if}
-	<Nav {segment} {stories} />
+	<header>
+		<div class="logo">
+			<Logo />
+		</div>
+		<Nav {segment} {stories} />
+	</header>
 	<slot />
 </div>
 
@@ -95,5 +109,19 @@
 
 	footer {
 		text-align: center;
+	}
+
+	.logo {
+		@apply mt-6;
+		@apply mb-auto;
+	}
+
+	header {
+		@apply flex;
+		@apply justify-between;
+		@apply items-end;
+		@apply px-6;
+		@apply mx-auto;
+		@apply container;
 	}
 </style>

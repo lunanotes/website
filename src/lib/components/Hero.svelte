@@ -1,21 +1,13 @@
 <script>
 	import getComponent from '$lib/components/storyblok/index';
-	import Title from '$lib/components/storyblok/Title.svelte';
 	import { editable } from '$lib/utils/directives';
-	import Logo from '$lib/assets/logo.svelte';
 	import Demo from '$lib/partials/Demo.svelte';
-
-	import { fly } from 'svelte/transition';
 
 	export let blok;
 </script>
 
 <header class="cont" use:editable={blok}>
 	<section>
-		<div class="logo">
-			<Logo />
-		</div>
-
 		{#if blok.body}
 			{#each blok.body as blok}
 				<div class="column">
@@ -28,10 +20,6 @@
 </header>
 
 <style lang="scss">
-	.logo {
-		@apply mt-6;
-		@apply mb-auto;
-	}
 	header {
 		@apply flex;
 		@apply flex-col;

@@ -4,14 +4,21 @@
 </script>
 
 <nav>
-	<ul>
-		<li class={segment === undefined ? 'selected' : ''}>
-			<a href="."> Index </a>
-		</li>
-		{#each stories as story}
-			<li class={story.full_slug === segment ? 'selected' : ''}>
-				<a href={story.full_slug}>{story.name}</a>
-			</li>
-		{/each}
-	</ul>
+	{#each stories as story}
+		<a href={story.full_slug} class={story.full_slug === segment ? 'selected' : ''}>
+			{story.name}
+		</a>
+	{/each}
 </nav>
+
+<style lang="scss">
+	nav {
+		@apply flex;
+		@apply gap-8;
+		a {
+			@apply font-medium;
+			@apply text-lg;
+			@apply text-slate-700;
+		}
+	}
+</style>
