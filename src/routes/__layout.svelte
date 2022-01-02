@@ -29,7 +29,6 @@
 	const token = import.meta.env.VITE_SPLITBEE_TOKEN;
 
 	export let stories = [];
-	export let segment;
 
 	onMount(() => {
 		splitbee.init({
@@ -47,7 +46,7 @@
 		<div class="logo">
 			<Logo />
 		</div>
-		<Nav {segment} {stories} />
+		<Nav {stories} />
 	</header>
 	<slot />
 </div>
