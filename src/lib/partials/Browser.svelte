@@ -18,7 +18,7 @@
 
 <style lang="scss">
 	.window {
-		@apply mt-16;
+		@apply mt-8;
 		@apply flex-1;
 		@apply max-w-3xl;
 		@apply rounded-lg;

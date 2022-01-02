@@ -1,5 +1,4 @@
 import Grid from './Grid.svelte'
-import Teaser from './Teaser.svelte'
 import Feature from './Feature.svelte'
 import Page from './Page.svelte'
 import NotFound from './404.svelte'
@@ -12,11 +11,10 @@ import Testimonial from "./Testimonial.svelte";
 import Hero from "../Hero.svelte"
 
 const Components = {
-  grid: Grid,
-  teaser: Teaser,
-  feature: Feature,
-  page: Page,
-  call_to_action: CallToAction,
+  Grid,
+  Feature,
+  Page,
+  CallToAction,
   Hero,
   Button,
   Handwrite,
