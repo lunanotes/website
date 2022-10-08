@@ -1,0 +1,61 @@
+[
+  {
+    "product": {
+      "name": "Free Plan",
+      "description": "The bare minimum."
+    },
+    "price": {
+      "currency": "usd",
+      "unit_amount": 0,
+      "recurring": {
+        "interval": "month"
+      }
+    },
+    "includes": [
+      "A number starting at 0",
+      "A \"plus\" button",
+      "A \"minus\" button",
+      "Infinite button clicks"
+    ]
+  },
+  {
+    "product": {
+      "name": "Basic Plan",
+      "description": "The basic services.",
+      "id": "prod_Kw3KuKIwd3zIFP"
+    },
+    "price": {
+      "currency": "usd",
+      "unit_amount": 1000,
+      "recurring": {
+        "interval": "month"
+      },
+      "id": "price_1KGBDSEpQKHlGHMG4rgEAYJG"
+    },
+    "includes": [
+      "All the features in the free plan.",
+      "You get to pay money for it.",
+      "Lifetime support"
+    ]
+  },
+  {
+    "product": {
+      "name": "Premium Plan",
+      "description": "Everything in the basic plan and then some.",
+      "id": "prod_Kw3KHjYu5O35u6"
+    },
+    "price": {
+      "currency": "usd",
+      "unit_amount": 1500,
+      "recurring": {
+        "interval": "month"
+      },
+      "id": "price_1KGBDSEpQKHlGHMGgtyHG1nj"
+    },
+    "includes": [
+      "All the features of the basic plan",
+      "A sense of superiority",
+      "Nothing else"
+    ]
+  }
+]

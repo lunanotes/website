@@ -7,6 +7,9 @@ import Button from "./Button.svelte";
 import Title from "./Title.svelte";
 import Handwrite from "./Handwrite.svelte";
 import Paragraph from "./Paragraph.svelte";
+import Pricing from "../Pricing/Pricing.svelte";
+import PricingPlan from "../Pricing/PricingPlan.svelte";
+import PricingPlanItem from "../Pricing/PricingPlanItem.svelte";
 import Testimonial from "./Testimonial.svelte";
 import Hero from "../Hero.svelte"
 
@@ -20,7 +23,10 @@ const Components = {
   Handwrite,
   Title,
   Testimonial,
-  Paragraph
+  Paragraph,
+  Pricing,
+  PricingPlan,
+  PricingPlanItem
 }
 
 export default component => {

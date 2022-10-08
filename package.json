@@ -13,6 +13,7 @@
 		"@sveltejs/kit": "next",
 		"@tailwindcss/forms": "^0.4.0",
 		"autoprefixer": "^10.4.0",
+		"dotenv": "^10.0.0",
 		"eslint": "^7.32.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^3.2.1",
@@ -28,8 +29,10 @@
 	"type": "module",
 	"dependencies": {
 		"@splitbee/web": "^0.3.0",
+		"@stripe/stripe-js": "^1.22.0",
 		"axios": "^0.24.0",
 		"storyblok-js-client": "^4.1.6",
+		"stripe": "^8.195.0",
 		"youtube-player": "^5.5.2"
 	}
 }

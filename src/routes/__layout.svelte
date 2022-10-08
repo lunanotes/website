@@ -2,7 +2,15 @@
 	import client, { defaultRequestConfig as reqConfig } from '$lib/utils/storyblok';
 
 	export async function load() {
-		const response = await client.getAll('cdn/stories', reqConfig);
+		const url = 'cdn/stories';
+		const response = await client.getAll(url, {
+			...reqConfig,
+			filter_query: {
+				show_in_menu: {
+					in: true
+				}
+			}
+		});
 
 		let stories =
 			response.sort((a, b) => {
