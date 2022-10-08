@@ -1,0 +1,5 @@
+@mixin animation {
+  @apply transition-all;
+  @apply duration-300;
+  @apply ease-in-out;
+}
