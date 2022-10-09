@@ -1,5 +1,4 @@
 <script>
-  import Logo from "@/assets/Logo.svelte";
   import Download from "@/components/partials/Download.svelte";
   import Demo from "@/components/partials/Demo.svelte";
 
@@ -9,26 +8,18 @@
 
 <header class="cont">
   <section>
-    <div class="logo">
-      <Logo />
-    </div>
-
     <h1 in:fly={{ y: 50, duration: 400 }}>
       {i18n("hero.title")}
     </h1>
     <p in:fly={{ y: 50, duration: 400, delay: 300 }}>
       {i18n("hero.description")}
     </p>
-    <Download />
+    <Download campaign="hero" />
   </section>
   <Demo />
 </header>
 
 <style lang="scss">
-  .logo {
-    @apply mt-6;
-    @apply mb-auto;
-  }
   header {
     @apply flex;
     @apply flex-col;

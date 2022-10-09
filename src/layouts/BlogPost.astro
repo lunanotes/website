@@ -1,0 +1,23 @@
+---
+import Layout from "./Layout.astro";
+import Header from "@/components/partials/Header.svelte";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props.content;
+---
+
+<Layout title={title}>
+  <Header />
+  <div class="container mx-auto p-0 md:py-12">
+    <article
+      class="prose prose-slate dark:prose-invert max-w-screen-md mx-auto"
+    >
+      <h1>{title}</h1>
+
+      <slot />
+    </article>
+  </div>
+</Layout>

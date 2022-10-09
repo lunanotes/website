@@ -7,7 +7,7 @@
   <h2>{i18n("cta.title")}</h2>
   <p>{i18n("cta.description")}</p>
 
-  <Download cta={true} />
+  <Download campaign="cta" />
 </section>
 
 <style lang="scss">

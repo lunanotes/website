@@ -6,6 +6,17 @@ import CallToAction from "@/components/partials/callToAction.svelte";
 import Testimonials from "@/components/partials/Testimonials.svelte";
 import Faq from "@/components/partials/Faq.svelte";
 import FooterSection from "@/components/partials/FooterSection.svelte";
+import BlogSection from "@/components/blog/BlogSection.svelte";
+
+const posts = (await Astro.glob("./blog/*.{md,mdx}"))
+  .filter((a) => {
+    return a.frontmatter.featured && !a.frontmatter.draft;
+  })
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.pubDate).valueOf() -
+      new Date(a.frontmatter.pubDate).valueOf()
+  );
 ---
 
 <HomeLayout title="Welcome to Astro.">
@@ -14,5 +25,6 @@ import FooterSection from "@/components/partials/FooterSection.svelte";
   <CallToAction />
   <Features />
   <Faq />
+  <BlogSection posts={posts} />
   <FooterSection />
 </HomeLayout>

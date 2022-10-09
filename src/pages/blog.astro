@@ -1,0 +1,30 @@
+---
+import BlogLayout from "@/layouts/BlogLayout.astro";
+import PostList from "@/components/blog/PostList.svelte";
+
+const posts = (await Astro.glob("./blog/*.{md,mdx}"))
+  .filter((post) => !post.frontmatter.draft)
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.pubDate).valueOf() -
+      new Date(a.frontmatter.pubDate).valueOf()
+  );
+---
+
+<BlogLayout title="Welcome to Astro.">
+  <section class="bg-white dark:bg-gray-900">
+    <div class="container px-6 py-10 mx-auto">
+      <div class="flex items-center justify-between">
+        <h1
+          class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white"
+        >
+          recent posts
+        </h1>
+      </div>
+
+      <hr class="my-8 border-gray-200 dark:border-gray-700" />
+
+      <PostList posts={posts} />
+    </div>
+  </section>
+</BlogLayout>

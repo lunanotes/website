@@ -3,25 +3,26 @@
   import i18n from "@/utils/i18n";
   import Download from "@/assets/download.svelte";
 
-  export let cta = false;
+  export let campaign = "download";
+  export let small = false;
 </script>
 
 <article>
   <a
     in:fly={{ y: 50, duration: 400, delay: 600 }}
     data-splitbee-event="Webstore"
-    data-splitbee-event-type={cta ? "cta" : "hero"}
-    href="https://chrome.google.com/webstore/detail/lunanotes-notas-en-youtub/oehoffnnkgcdacmbkhmlbjedinpampak?utm_source=landing&utm_medium={cta
-      ? 'cta'
-      : 'hero'}&utm_campaign=click"
-    class="download {cta ? 'cta' : 'hero'}"
+    data-splitbee-event-type={campaign}
+    href="https://chrome.google.com/webstore/detail/lunanotes-notas-en-youtub/oehoffnnkgcdacmbkhmlbjedinpampak?utm_source=landing&utm_medium={campaign}&utm_campaign=click"
+    class="download {campaign} {small ? 'small' : ''}"
   >
     <Download />
     {i18n("hero.button.text")}
   </a>
-  <span class="description" in:fly={{ y: 50, duration: 400, delay: 900 }}>
-    {i18n("hero.button.helper")}
-  </span>
+  {#if !small}
+    <span class="description" in:fly={{ y: 50, duration: 400, delay: 900 }}>
+      {i18n("hero.button.helper")}
+    </span>
+  {/if}
 </article>
 
 <style lang="scss">
@@ -57,6 +58,19 @@
 
     @apply ring;
     @apply ring-offset-white;
+
+    &.small {
+      @apply text-xs;
+      @apply py-2;
+      @apply px-3;
+      @apply mb-0;
+      @apply tracking-wider;
+      :global(svg) {
+        @apply w-6;
+        @apply h-6;
+      }
+    }
+
     &.cta {
       @apply ring-offset-slate-100;
     }
