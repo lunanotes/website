@@ -1,7 +1,3 @@
-<script>
-  import { fly } from "svelte/transition";
-</script>
-
 <div class="window">
   <div class="topbar">
     <span class="dot red" />

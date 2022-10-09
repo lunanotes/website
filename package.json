@@ -13,6 +13,7 @@
   "dependencies": {
     "@astrojs/svelte": "^1.0.1",
     "@astrojs/tailwind": "^2.0.2",
+    "@fontsource/indie-flower": "^4.5.10",
     "@splitbee/web": "^0.3.0",
     "astro": "^1.4.6",
     "dayjs": "^1.11.5",

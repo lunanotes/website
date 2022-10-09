@@ -20,7 +20,7 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}"))
 ---
 
 <HomeLayout title="Welcome to Astro.">
-  <Hero />
+  <Hero client:load />
   <Testimonials />
   <CallToAction />
   <Features />
