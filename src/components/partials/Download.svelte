@@ -1,7 +1,7 @@
 <script>
   import { fly } from "svelte/transition";
   import i18n from "@/utils/i18n";
-  import Download from "@/assets/download.svelte";
+  import Download from "@/assets/Download.svelte";
 
   export let campaign = "download";
   export let small = false;
