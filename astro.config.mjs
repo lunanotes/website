@@ -7,5 +7,6 @@ import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [svelte(), tailwind(), sitemap(), compress()]
+  site: "https://www.lunanotes.io",
+  integrations: [svelte(), tailwind(), sitemap(), compress()],
 });
