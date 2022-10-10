@@ -19,7 +19,7 @@
   >
     <a href={post.url}>{post.frontmatter.title}</a>
   </h2>
-  <h4 class="mb-2 text-sm text-gray-500">{dateFromNow}</h4>
+  <span class="inline-block mb-2 text-sm text-gray-500">{dateFromNow}</span>
 
   <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
     {post.frontmatter.description}
@@ -28,7 +28,7 @@
     <div class="flex items-center space-x-4">
       <img
         class="w-7 h-7 rounded-full"
-        src="avatar-borderless.png"
+        src="avatar-borderless.webp"
         alt={post.frontmatter.author}
       />
       <span class="font-medium dark:text-white">
@@ -39,7 +39,7 @@
       href={post.url}
       class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline"
     >
-      Read more
+      Continue reading
       <svg
         class="ml-2 w-4 h-4"
         fill="currentColor"

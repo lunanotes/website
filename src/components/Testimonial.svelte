@@ -62,7 +62,7 @@
     }
   }
   p {
-    @apply text-slate-500;
+    @apply text-slate-600;
     @apply italic;
     @apply mb-5;
     @screen md {

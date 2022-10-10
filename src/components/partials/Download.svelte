@@ -85,7 +85,7 @@
   }
 
   .description {
-    @apply text-slate-400;
+    @apply text-slate-500;
     @apply tracking-wide;
     font-family: "Indie Flower", cursive;
     @apply text-lg;
