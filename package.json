@@ -12,11 +12,13 @@
   },
   "dependencies": {
     "@astrojs/netlify": "^1.1.0",
+    "@astrojs/sitemap": "^1.0.0",
     "@astrojs/svelte": "^1.0.1",
     "@astrojs/tailwind": "^2.0.2",
     "@fontsource/indie-flower": "^4.5.10",
     "@splitbee/web": "^0.3.0",
     "astro": "^1.4.6",
+    "astro-compress": "^1.0.11",
     "dayjs": "^1.11.5",
     "sharp": "^0.31.1",
     "svelte": "^3.50.1",
