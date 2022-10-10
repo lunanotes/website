@@ -1,16 +1,16 @@
 ---
 import Layout from "./Layout.astro";
-import Header from "@/components/partials/Header.svelte";
 
 export interface Props {
   title: string;
+  description: string;
+  keywords: string;
 }
 
-const { title } = Astro.props;
+const { title, description, keywords } = Astro.props;
 ---
 
-<Layout title={title}>
-  <Header />
+<Layout title={title} description={description} keywords={keywords}>
   <div class="container mx-auto p-5 md:px-12 lg:px-20">
     <slot />
   </div>

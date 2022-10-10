@@ -1,5 +1,5 @@
 ---
-import HomeLayout from "@/layouts/HomeLayout.astro";
+import Layout from "@/layouts/Layout.astro";
 import Hero from "@/components/partials/Hero.svelte";
 import Features from "@/components/partials/Features.svelte";
 import CallToAction from "@/components/partials/callToAction.svelte";
@@ -7,6 +7,12 @@ import Testimonials from "@/components/partials/Testimonials.svelte";
 import Faq from "@/components/partials/Faq.svelte";
 import FooterSection from "@/components/partials/FooterSection.svelte";
 import BlogSection from "@/components/blog/BlogSection.svelte";
+
+const title = "LunaNotes - take notes on YouTube videos";
+const description =
+  "LunaNotes is a free, open-source, and privacy-focused note-taking app for YouTube videos. Take notes on YouTube videos and share them with your friends.";
+const keywords =
+  "LunaNotes, Youtube, Chrome extension, Chrome webstore, note taking app, take notes on youtube";
 
 const posts = (await Astro.glob("./blog/*.{md,mdx}"))
   .filter((a) => {
@@ -19,7 +25,7 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}"))
   );
 ---
 
-<HomeLayout title="Welcome to Astro.">
+<Layout title={title} description={description} keywords={keywords}>
   <Hero client:load />
   <Testimonials />
   <CallToAction />
@@ -27,4 +33,4 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}"))
   <Faq />
   <BlogSection posts={posts} />
   <FooterSection />
-</HomeLayout>
+</Layout>
