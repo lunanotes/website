@@ -1,11 +1,14 @@
 <script>
   import Browser from "./Browser.svelte";
-  import VideoDemo from "./Video.svelte";
+  import LiteYouTube from "svelte-lite-youtube-embed";
 </script>
 
 <Browser>
   <div class="videoWrapper">
-    <VideoDemo videoId="B85WHD9bKvc" />
+    <LiteYouTube
+      videoId="B85WHD9bKvc"
+      videoTitle="LunaNotes - Notas en YouTube"
+    />
   </div>
 </Browser>
 

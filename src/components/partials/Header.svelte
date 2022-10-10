@@ -7,7 +7,7 @@
   <div
     class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
   >
-    <a class="flex items-center mb-4 md:mb-0" href="/">
+    <a class="flex items-center mb-4 md:mb-0" href="/" aria-label="Home">
       <span class="ml-3">
         <Logo />
       </span>

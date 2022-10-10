@@ -19,7 +19,12 @@
     {i18n("hero.button.text")}
   </a>
   {#if !small}
-    <span class="description" in:fly={{ y: 50, duration: 400, delay: 900 }}>
+    <span
+      class="description {campaign == 'cta'
+        ? 'text-slate-600'
+        : 'text-slate-500'}"
+      in:fly={{ y: 50, duration: 400, delay: 900 }}
+    >
       {i18n("hero.button.helper")}
     </span>
   {/if}
@@ -85,7 +90,6 @@
   }
 
   .description {
-    @apply text-slate-500;
     @apply tracking-wide;
     font-family: "Indie Flower", cursive;
     @apply text-lg;

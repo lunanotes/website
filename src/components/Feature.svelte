@@ -84,7 +84,7 @@
     @apply tracking-wide;
     @apply font-normal;
     @apply text-lg;
-    @apply text-slate-400;
+    @apply text-slate-500;
 
     @include animation;
     @screen md {

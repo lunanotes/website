@@ -82,7 +82,7 @@
   }
   span {
     @apply text-sm;
-    @apply text-slate-400;
+    @apply text-slate-500;
     @apply tracking-wide;
   }
   .stars {

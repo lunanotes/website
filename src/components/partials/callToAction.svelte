@@ -34,7 +34,7 @@
   }
 
   p {
-    @apply text-slate-500;
+    @apply text-slate-600;
     @apply text-lg;
     @apply mb-8;
   }

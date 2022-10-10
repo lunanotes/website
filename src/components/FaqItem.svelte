@@ -38,7 +38,7 @@
     @apply text-slate-500;
     @apply leading-relaxed;
     :global(a) {
-      @apply text-blue-400;
+      @apply text-blue-600;
       &:hover {
         @apply underline;
       }

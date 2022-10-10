@@ -13,14 +13,14 @@
 
 <style>
   footer {
-    @apply text-slate-400;
+    @apply text-slate-500;
     @apply text-sm;
     @apply text-center;
     @apply py-8;
   }
 
   a {
-    @apply text-slate-400;
+    @apply text-slate-600;
     @apply font-medium;
   }
 </style>
