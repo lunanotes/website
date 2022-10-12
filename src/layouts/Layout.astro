@@ -1,6 +1,7 @@
 ---
 import "@fontsource/indie-flower";
 import Header from "@/components/partials/Header.svelte";
+import { SEO } from "astro-seo";
 
 export interface Props {
   title: string;
@@ -9,6 +10,8 @@ export interface Props {
 }
 
 const { title, description, keywords } = Astro.props;
+
+const socialImageURL = new URL("/twitter.png", Astro.url).toString();
 ---
 
 <!DOCTYPE html>
@@ -17,10 +20,39 @@ const { title, description, keywords } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
+
+    <SEO
+      title={title}
+      description={description}
+      twitter={{
+        card: "summary_large_image",
+        site: "@lunanotesapp",
+        creator: "@jfdelarosa",
+      }}
+      openGraph={{
+        basic: {
+          title,
+          type: "website",
+          image: socialImageURL,
+        },
+        image: {
+          alt: "LunaNotes - Take notes on YouTube",
+        },
+      }}
+      extend={{
+        meta: [
+          {
+            name: "twitter:image",
+            content: socialImageURL,
+          },
+          { name: "twitter:title", content: title },
+          { name: "twitter:description", content: description },
+        ],
+      }}
+    />
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -28,8 +60,6 @@ const { title, description, keywords } = Astro.props;
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-
-    <title>{title}</title>
   </head>
   <body>
     <Header />
