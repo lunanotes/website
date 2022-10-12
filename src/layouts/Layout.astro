@@ -65,5 +65,13 @@ const socialImageURL = new URL("/twitter.png", Astro.url).toString();
     <Header />
 
     <slot />
+
+    <script>
+      import splitbee from "@splitbee/web";
+
+      splitbee.init({
+        token: import.meta.env.PUBLIC_SPLITBEE_TOKEN,
+      });
+    </script>
   </body>
 </html>
