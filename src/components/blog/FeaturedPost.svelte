@@ -12,22 +12,22 @@
 </script>
 
 <article
-  class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+  class="flex flex-col rounded-lg border border-gray-200 bg-white p-6 shadow-md dark:border-gray-700 dark:bg-gray-800"
 >
   <h2
     class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
   >
     <a href={post.url}>{post.frontmatter.title}</a>
   </h2>
-  <span class="inline-block mb-2 text-sm text-gray-500">{dateFromNow}</span>
+  <span class="mb-2 inline-block text-sm text-gray-500">{dateFromNow}</span>
 
   <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
     {post.frontmatter.description}
   </p>
-  <div class="flex justify-between items-center">
+  <div class="mt-auto flex items-center justify-between">
     <div class="flex items-center space-x-4">
       <img
-        class="w-7 h-7 rounded-full"
+        class="h-7 w-7 rounded-full"
         src="avatar-borderless.webp"
         alt={post.frontmatter.author}
       />
@@ -37,11 +37,11 @@
     </div>
     <a
       href={post.url}
-      class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline"
+      class="text-primary-600 dark:text-primary-500 inline-flex items-center font-medium hover:underline"
     >
       Continue reading
       <svg
-        class="ml-2 w-4 h-4"
+        class="ml-2 h-4 w-4"
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"

@@ -2,6 +2,11 @@
 import BlogLayout from "@/layouts/BlogLayout.astro";
 import PostList from "@/components/blog/PostList.svelte";
 
+const title = "Blog";
+const description = "Great content for productivity hackers!";
+const keywords =
+  "productivity, blog, hacker, note taking apps, how to take notes on youtube";
+
 const posts = (await Astro.glob("./blog/*.{md,mdx}"))
   .filter((post) => !post.frontmatter.draft)
   .sort(
@@ -11,7 +16,7 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}"))
   );
 ---
 
-<BlogLayout title="Welcome to Astro.">
+<BlogLayout title={title} description={description} keywords={keywords}>
   <section class="bg-white dark:bg-gray-900">
     <div class="container px-6 py-10 mx-auto">
       <div class="flex items-center justify-between">

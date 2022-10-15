@@ -2,7 +2,8 @@
 layout: "../../layouts/BlogPost.astro"
 title: "How to Ace Your Classes with LunaNotes for YouTube"
 description: "As a student, you're probably used to taking notes in class. But what happens when your professor starts using YouTube videos as a teaching tool?"
-pubDate: "Jul 08 2022"
+keywords: "YouTube, notes, productivity, study, learning, education, school, college, university, online, video, tutorial, lecture, course, class, education, school, college, university, online, video, tutorial, lecture, course, class"
+pubDate: "Oct 01 2022"
 heroImage: "/placeholder-hero.jpg"
 author: "Fernando de la Rosa"
 featured: true
