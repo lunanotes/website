@@ -6,7 +6,7 @@
 <Browser>
   <div class="videoWrapper">
     <LiteYouTube
-      videoId="B85WHD9bKvc"
+      videoId="Ee8quPh5Esg"
       videoTitle="LunaNotes - Notas en YouTube"
     />
   </div>
